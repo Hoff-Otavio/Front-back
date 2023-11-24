@@ -13,8 +13,8 @@ export class RatingService {
   return this.HttpClient.get<Anime[]>('/Anime/get-rating-list');
   }
 
-  getRatingdeById(animeId: string) {
-    return this.HttpClient.get<any>('/Anime/get-rating-by-id', { animeId });
+  getRatingdeById(id: string) {
+    return this.HttpClient.get<any>('/Anime/get-rating-by-id', { id});
   }
 
   createRating(rating: any) {

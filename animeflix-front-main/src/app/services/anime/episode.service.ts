@@ -25,7 +25,7 @@ export class EpisodeService {
     return this.HttpClient.put<any>('/Anime/update-episode', episode);
   }
 
-  deleteEpisode(animeId: number) {
-    return this.HttpClient.delete<any>('/Anime/delete-episode', { animeId });
+  deleteEpisode(id: number) {
+    return this.HttpClient.delete<any>('/Anime/delete-episode', { id });
   }
 }

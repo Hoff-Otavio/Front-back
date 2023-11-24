@@ -13,8 +13,8 @@ export class UserSubscriptionservice {
   return this.HttpClient.get<Anime[]>('/Anime/get-usersubscription-list');
   }
 
-  getUsersubscriptionById(userId: string) {
-    return this.HttpClient.get<any>('/Anime/get-usersubscription-by-id', { userId });
+  getUsersubscriptionById(id: string) {
+    return this.HttpClient.get<any>('/Anime/get-usersubscription-by-id', { id });
   }
 
   createUsersubscription(usersubscription: any) {
@@ -25,7 +25,7 @@ export class UserSubscriptionservice {
     return this.HttpClient.put<any>('/Anime/update-usersubscription', usersubscription);
   }
 
-  deleteUsersubscription(userId: number) {
-    return this.HttpClient.delete<any>('/Anime/delete-usersubscription', { userId });
+  deleteUsersubscription(id: number) {
+    return this.HttpClient.delete<any>('/Anime/delete-usersubscription', { id });
   }
 }
